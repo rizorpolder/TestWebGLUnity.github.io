@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>SpySchool</title>
+    <title>Schulte</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <!-- Yandex Games SDK -->
@@ -64,7 +64,7 @@
         codeUrl: buildUrl + "/School.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "BGF.GAMES",
-        productName: "SpySchool",
+        productName: "Schulte",
         productVersion: "1.0.0",
         showBanner: unityShowBanner,
       };
@@ -113,42 +113,6 @@
         });
       };
       document.body.appendChild(script);
-
-      // integration
-      
-      // init player
-      let player;
-      function initPlayer() {
-        return window.ysdk.getPlayer({ scopes: false }).then(_player => {
-          player = _player;
-          return player;
-        });
-      }
-
-      YaGames
-        .init()
-        .then(ysdk => {
-          console.log('Yandex: SDK initialized');
-          window.ysdk = ysdk;
-          window.gameShop = []
-          window.purchases = [];
-
-          // init payments
-          ysdk.getPayments({ signed: true }).then(_payments => {
-            console.log('Yandex: payments is initialized');
-            window.payments = _payments;
-            _payments.getCatalog().then(_catalog => {
-              console.log('Yandex: download catalog');
-              window.gameShop = _catalog;
-              _payments.getPurchases().then(purchases => {
-                console.log('Yandex: get player purchases ' + purchases);
-                window.purchases = purchases;
-              })
-            });
-          }).catch(err => {
-            console.log('Yandex: payments is not initialized');
-          });
-        });
     </script>
   
   </body>
