@@ -772,7 +772,6 @@
     <type fullname="Managers.TutorialTarget" preserve="nothing" serialized="true" />
     <type fullname="Managers.UpdateVersionData" preserve="nothing" serialized="true" />
     <type fullname="Managers.WipeData" preserve="nothing" serialized="true" />
-    <type fullname="Managers.WipeVersionData" preserve="nothing" serialized="true" />
     <type fullname="MergeAdRewardData" preserve="nothing" serialized="true" />
     <type fullname="MergeAdditionalOrderRewardsData" preserve="nothing" serialized="true" />
     <type fullname="MergeBubbleData" preserve="nothing" serialized="true" />
