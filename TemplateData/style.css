@@ -1,16 +1,105 @@
-body { padding: 0; margin: 0 }
-#unity-container { position: absolute }
-#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
-#unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
-#unity-canvas { background: #1F1F20 }
-.unity-mobile #unity-canvas { width: 100%; height: 100% }
-#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
-#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
-#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
-#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
-#unity-footer { position: relative }
-.unity-mobile #unity-footer { display: none }
-#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
-#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
-#unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
-#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.game-wrapper {
+    width: 100%;
+    background: no-repeat center url(../Web_bg.webp);
+    background-size: cover;
+    margin: 0;
+    min-height: 100%;
+}
+
+.game {
+    position: relative;
+    /* min-height: 100%; */
+}
+
+.webgl-content {
+    border: none;
+    bottom: 30%;
+    height: 100vh;
+    padding: 0;
+}
+
+#unityContainerCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+}
+
+#unityContainer {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 200px 80px rgba(255, 255, 255, 255);
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    aspect-ratio: 16/9;
+    max-width: calc(16 / 9 * 90vh);
+    background: no-repeat center url(../TemplateData/LoadingGameBackground.webp);
+    background-size: cover;
+}
+
+#unityContainer:fullscreen {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    aspect-ratio: 16/9;
+    background: no-repeat center url(../TemplateData/LoadingGameBackground.webp);
+    background-size: cover;
+}
+
+.progress {
+    position: absolute;
+    width: 100%;
+    height: 6.5%;
+    top: 81%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.box {
+    position: relative;
+    width: 40%;
+    height: 80%;
+    left: 30%;
+    bottom: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.empty {
+    background: no-repeat center / contain url(../TemplateData/progress-bar-empty-dark.webp);
+    width: 100%;
+    height: 100%;
+}
+
+.full {
+    background: no-repeat left / cover url(../TemplateData/progress-bar-full-dark.webp);
+    width: 100%;
+    height: 100%;
+    transform: scaleX(99%);
+}
