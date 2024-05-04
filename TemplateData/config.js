@@ -1,10 +1,10 @@
 
 var buildUrl = "Build";
-var loaderUrl = buildUrl + "/unservered.loader.js";
+var loaderUrl = buildUrl + "/newSave.loader.js";
 var config = {
-    dataUrl: buildUrl + "/unservered.data.unityweb",
-    frameworkUrl: buildUrl + "/unservered.framework.js.unityweb",
-    codeUrl: buildUrl + "/unservered.wasm.unityweb",
+    dataUrl: buildUrl + "/newSave.data.unityweb",
+    frameworkUrl: buildUrl + "/newSave.framework.js.unityweb",
+    codeUrl: buildUrl + "/newSave.wasm.unityweb",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "BGF.GAMES",
 productName: "Lucy’s Ville",
